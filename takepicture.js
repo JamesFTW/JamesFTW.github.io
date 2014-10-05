@@ -50,21 +50,8 @@
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
   }
-
-  function savepicture(){
-    var canvasData = canvas.getimagedata('image/png')
-    var ajax = new XMLHttpRequest();
-    ajax.open("POST",'testSave.php',false);
-    ajax.onreadystatechange = function() {
-        console.log(ajax.responseText);
-    }
-    ajax.setRequestHeader('Content-Type', 'application/upload');
-    ajax.send("imgData="+canvasData);
-
-  }
   startbutton.addEventListener('click', function(ev){
       takepicture();
-      savepicture();
     ev.preventDefault();
   }, false);
 })()
