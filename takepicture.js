@@ -52,11 +52,12 @@
   }
 
   function savepicture(){
-    var canvasData = canvas.toDataURL('image/png')
+    var canvasData = canvas.getimagedata('image/png')
     var ajax = new XMLHttpRequest();
     ajax.open("POST",'testSave.php',false);
     ajax.onreadystatechange = function() {
         console.log(ajax.responseText);
+        
     }
     ajax.setRequestHeader('Content-Type', 'application/upload');
     ajax.send("imgData="+canvasData);
