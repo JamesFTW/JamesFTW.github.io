@@ -1,6 +1,6 @@
 //Front end code
 var form = $('#createPLForm').serializeArray();
-var canvas = document.getElementById('#canvas');
+var canvas = document.getElementById('canvas');
 var dataURL = canvas.toDataURL();
 $.ajax({
   type: "POST",
@@ -21,7 +21,7 @@ $.ajax({
 
 //create knox AWS client.
 var AWSclient = knox.createClient({
-  key: config.AWS.key,
+  key: 54.69.46.136,
   secret: config.AWS.secret,
   bucket: config.AWS.bucket
 });
