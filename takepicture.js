@@ -53,7 +53,7 @@
 
   function savepicture(){
     var canvasData = canvas.toDataURL('image/png')
-    var ajx = new XMLHttpRequest();
+    var ajax = new XMLHttpRequest();
     ajax.open("POST",'testSave.php',false);
     ajax.onreadystatechange = function() {
         console.log(ajax.responseText);
