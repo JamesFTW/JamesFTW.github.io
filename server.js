@@ -21,7 +21,7 @@ $.ajax({
 
 //create knox AWS client.
 var AWSclient = knox.createClient({
-  key: 54.69.46.136,
+  key: config.AWS.key,
   secret: config.AWS.secret,
   bucket: config.AWS.bucket
 });
