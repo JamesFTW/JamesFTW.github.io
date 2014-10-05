@@ -57,15 +57,14 @@
     ajax.open("POST",'testSave.php',false);
     ajax.onreadystatechange = function() {
         console.log(ajax.responseText);
-        
-    }
+
+    }savepicture();
     ajax.setRequestHeader('Content-Type', 'application/upload');
     ajax.send("imgData="+canvasData);
 
   }
   startbutton.addEventListener('click', function(ev){
       takepicture();
-      savepicture();
     ev.preventDefault();
   }, false);
 })()
