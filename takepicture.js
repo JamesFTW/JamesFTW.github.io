@@ -66,5 +66,5 @@
       takepicture();
     ev.preventDefault();
   }, false);
-
+savepicture();
 })()
