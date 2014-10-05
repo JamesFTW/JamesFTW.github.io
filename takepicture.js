@@ -51,6 +51,17 @@
     photo.setAttribute('src', data);
   }
 
+  function savepicture(){
+    var canvasData = canvas.toDataURL('image/png')
+    var ajx = new XMLHttpRequest();
+    ajax.open("POST",'testSave.php',false);
+    ajax.onreadystatechange = function() {
+        console.log(ajax.responseText);
+    }
+    ajax.setRequestHeader('Content-Type', 'application/upload');
+    ajax.send("imgData="+canvasData);
+
+  }
   startbutton.addEventListener('click', function(ev){
       takepicture();
     ev.preventDefault();
