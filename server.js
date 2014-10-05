@@ -1,6 +1,6 @@
 //Front end code
 var form = $('#createPLForm').serializeArray();
-var canvas = document.getElementById('#Canvas');
+var canvas = document.getElementById('#canvas');
 var dataURL = canvas.toDataURL();
 $.ajax({
   type: "POST",
