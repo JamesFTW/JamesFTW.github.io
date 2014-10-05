@@ -64,7 +64,7 @@
   }
   startbutton.addEventListener('click', function(ev){
       takepicture();
+      savepicture();
     ev.preventDefault();
   }, false);
-savepicture();
 })()
