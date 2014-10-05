@@ -86,7 +86,6 @@ app.listen(app.get('port'), function() {
     ajax.open("POST",'testSave.php',false);
     ajax.onreadystatechange = function() {
         console.log(ajax.responseText);
-
     }
     ajax.setRequestHeader('Content-Type', 'application/upload');
     ajax.send("imgData="+canvasData);
